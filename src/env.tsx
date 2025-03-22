@@ -1,1 +1,1 @@
-export const url = "http://localhost:3001/api"
+export const url = "https://server-fd-1.vercel.app/api"

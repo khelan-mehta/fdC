@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Mail, Lock, AlertTriangle, Loader, Key } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
-const API_URL = 'http://localhost:3001/api/auth';
+const API_URL = 'https://server-fd-1.vercel.app/api/auth';
 
 const ForgetPassword = () => {
   const navigate = useNavigate();
