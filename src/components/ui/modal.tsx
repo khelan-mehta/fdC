@@ -83,7 +83,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onClose, se
         });
         toast.error('Transaction flagged as fraudulent! Fraud count updated.');
       } else {
-        const processResponse = await fetch('https://server-fd-1.vercel.app/api/auth/user/transaction', {
+        const processResponse = await fetch('https://server-fd-1.vercel.app/auth/user/transaction', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ transaction: {userId: userId, recieverId: selectedUser ,...transactionData, amount: transactionData.Amount} }),
