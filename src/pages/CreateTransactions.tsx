@@ -44,6 +44,7 @@ const CreateTransactions = () => {
 
         const data = await response.json();
         setUsers(data.users);
+        
       } catch (err) {
         setError(err.message);
       } finally {

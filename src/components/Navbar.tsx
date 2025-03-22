@@ -53,7 +53,7 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-semibold text-gray-900"
           >
-            Blockchain Sentry
+            Anti Fraud
           </motion.span>
         </Link>
         

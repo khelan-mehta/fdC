@@ -101,8 +101,10 @@ export const api = {
         'Authorization': `Bearer ${token}`
       }
     });
+    const data = await handleApiResponse<AuthResponse>(response);
+    localStorage.setItem("amount", data.user.amountAvailable);
 
-    return handleApiResponse<AuthResponse>(response);
+    return data;
   },
 
   getAllUsers: async (token: string): Promise<AuthResponse[]> => {
