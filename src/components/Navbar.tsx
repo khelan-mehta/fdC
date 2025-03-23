@@ -79,6 +79,12 @@ const Navbar = () => {
               >
                 Create Transactions
               </Link>
+              <Link 
+                to="/transactions" 
+                className={location.pathname === '/transactions' ? activeNavLinkClasses : navLinkClasses}
+              >
+                View Transactions
+              </Link>
               <Button 
                 variant="ghost" 
                 onClick={logout}
@@ -146,10 +152,16 @@ const Navbar = () => {
                 Profile
               </Link>
               <Link 
-                to="/createTransactions" 
-                className={location.pathname === '/createTransactions' ? activeNavLinkClasses : navLinkClasses}
+                to="/transactions" 
+                className={location.pathname === '/transactions' ? activeNavLinkClasses : navLinkClasses}
               >
                 Create Transactions
+              </Link>
+              <Link 
+                to="/transactions" 
+                className={location.pathname === '/transactions' ? activeNavLinkClasses : navLinkClasses}
+              >
+                View Transactions
               </Link>
               <Button 
                 variant="ghost" 

@@ -17,6 +17,7 @@ import CreateTransactions from "./pages/CreateTransactions";
 import ForgetPassword from "./pages/ForgotPassword";
 import { RegistrationFlow } from "./components/RegistrationFlow";
 import Registration from "./pages/Registration";
+import TransactionsPage from "./pages/TransactionHistory";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/profile" element={<Profile />} />
               <Route path="/forgot-password" element={<ForgetPassword />} />
               <Route path="/createTransactions" element={<CreateTransactions />} />
+              <Route path="/transactions" element={<TransactionsPage />} />
               <Route path="/kyc" element={<Registration />} /> 
              
               <Route path="*" element={<NotFound />} />

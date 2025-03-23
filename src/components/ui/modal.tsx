@@ -68,7 +68,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onClose, se
     };
 
     try {
-      const fraudResponse = await fetch('https://localhost:5000/predict', {
+      const fraudResponse = await fetch('http://localhost:5000/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(transactionData),
@@ -76,7 +76,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onClose, se
       const fraudData = await fraudResponse.json();
 
       if (fraudData.is_laundering) {
-        await fetch('https://server-fd-1.vercel.app/api/auth/user/update-fraud', {
+        await fetch('https://server-fd-1.vercel.app/auth/user/update-fraud', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ senderId, receiverId: selectedUser }),
